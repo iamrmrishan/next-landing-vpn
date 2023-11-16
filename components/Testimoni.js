@@ -8,45 +8,57 @@ import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
 const Testimoni = ({
-  listTestimoni = [
+   testimonialPosts = [
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadhavi.pathirage%2Fposts%2Fpfbid0MP91mXmLuxAKDAXcqZMSyZ7dNzMYLmKbAYKSomp6fp7afeyk6tZjzWWieZCe7pg4l&show_text=true',
+      height: '351px',
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fsandushi.jayawardene%2Fposts%2Fpfbid0nkKZ9VMGL6mPKmhKsERS92ZVtukE441kEhvMKccyN5RFCbWFuZYoqpR8drCXcXNul&show_text=true',
+      height: '198px',
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpamoda.herath%2Fposts%2Fpfbid0275vCHGiMihbWx1s5rSCJnFLFJJJZnszKEHRTwtHtuN1zJTHeHcKX7Cvt1eAF5W75l&show_text=true',
+      height: '195px',
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
-      testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fkinkini.weeramanthri%2Fposts%2Fpfbid026Eo9WmdDHjxesbouNPUhjpsuLfy8unj6U67QrNdFQwmznwL2QqwUtduSZb9JdrUYl&show_text=true',
+      height: '260px',
     },
-  ],
+    {
+      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fthushi.dias%2Fposts%2Fpfbid025oEwwM1x3y929AtWHoG2tBZbtQiEMqBY425u1Du4Y22MyNH8UtdznFZXsBMvKLKCl&show_text=true',
+      height: '250px',
+    },
+  ]
 }) => {
+  // const settings = {
+  //     dots: true,
+  //     infinite: true,
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     speed: 2000,
+  //     autoplaySpeed: 2000,
+  //     cssEase: "linear",
+  //   responsive: [
+  //     {
+  //       breakpoint: 770,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
+
   const settings = {
     dots: true,
     customPaging: function (i) {
@@ -58,26 +70,29 @@ const Testimoni = ({
     },
     dotsClass: "slick-dots w-max absolute mt-20  ",
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
     responsive: [
-      {
-        breakpoint: 770,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+          {
+            breakpoint: 770,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
   };
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -86,37 +101,23 @@ const Testimoni = ({
       <Slider
         {...settings}
         arrows={false}
-        ref={setSliderRef}
         className="flex items-stretch justify-items-stretch"
+        ref={setSliderRef}
       >
-        {listTestimoni.map((listTestimonis, index) => (
-          <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
-                  <Image
-                    src={listTestimonis.image}
-                    height={50}
-                    width={50}
-                    alt="Icon People"
-                  />
-                  <div className="flex flex-col ml-5 text-left">
-                    <p className="text-lg text-black-600 capitalize">
-                      {listTestimonis.name}
-                    </p>
-                    <p className="text-sm text-black-500 capitalize">
-                      {listTestimonis.city},{listTestimonis.country}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
-                  <p className="text-sm">{listTestimonis.rating}</p>
-                  <span className="flex ml-4">
-                    <Stars className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-              <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
+        {testimonialPosts.map((post, index) => (
+          <div key={index} className="px-3 flex items-stretch">
+            <div className="border-2 border-gray-500 hover:border-blue-500 transition-all rounded-lg p-8 flex flex-col">
+              <iframe
+                title={`Testimonial ${index}`}
+                src={post.url}
+                width="100%"
+                height={post.height}
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowTransparency="true"
+                allow="encrypted-media"
+              />
             </div>
           </div>
         ))}
@@ -124,13 +125,13 @@ const Testimoni = ({
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
-            className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-blue-500 border hover:bg-blue-500 hover:text-white-500 transition-all text-blue-500 cursor-pointer"
             onClick={sliderRef?.slickPrev}
           >
             <ArrowBack className="h-6 w-6 " />
           </div>
           <div
-            className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
+            className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-blue-500 border hover:bg-blue-500 hover:text-white-500 transition-all text-blue-500 cursor-pointer"
             onClick={sliderRef?.slickNext}
           >
             <ArrowNext className="h-6 w-6" />

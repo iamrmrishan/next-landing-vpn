@@ -1,21 +1,20 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 // Default value for some meta data
 const defaultMeta = {
-  title: 'LaslesVPN',
-  siteName: 'LaslesVPN',
+  title: 'Skyrim Travels',
+  siteName: 'Skyrim Travels',
   description:
-    'Landing page VPN LaslesVPN Best VPN For Privacy, Country and Cheapest',
+    "Skyrim Travels Private Limited is a a trusted and dynamic travel agency based in Sri Lanka, committed to making your travel experiences exceptional. As a premier provider of travel services, we specialize in offering a range of comprehensive solutions to meet your travel needs. Whether you're planning a business trip, a family vacation, or a romantic getaway, we've got you covered. At Skyrim Travels, we understand that every journey is unique, and that's why we go the extra mile to provide personalized and tailored services. Our dedicated team of travel experts is here to assist you every step of the way, ensuring that your travel plans are seamless and hassle-free. Our extensive range of services includes booking air tickets to your desired destinations, offering visa assistance to help you navigate the complexities of international travel, and curating exciting holiday packages that cater to various preferences and budgets. Additionally, we provide comprehensive travel insurance options to safeguard your trip against any unforeseen circumstances. Customer satisfaction is at the heart of our business. We pride ourselves on delivering the best customer service to each and every client we serve. Our team is committed to understanding your unique requirements and providing personalized recommendations to enhance your travel experiences. We strive to exceed your expectations and create lasting memories. Choose Skyrim Travels Private Limited for a delightful travel experience. Let us handle the details while you focus on creating unforgettable moments. Contact us today and embark on your next adventure with confidence!",
   // change base url of your web (without '/' at the end)
-  url: 'https://next-landing-vpn.vercel.app',
+  url: 'https://skyrimtravels.lk/',
   type: 'website',
   robots: 'follow, index',
   // change with url of your image (recommended dimension = 1.91:1)
-  // used in twitter, facebook, etc. card when link copied in tweet/status 
+  // used in twitter, facebook, etc. card when link copied in tweet/status
   image: 'https://next-landing-vpn.vercel.app/assets/card-image.png',
-  author: 'Lorem Ipsum'
+  author: 'Lorem Ipsum',
 };
 
 /**
@@ -39,7 +38,7 @@ const SeoHead = (props) => {
   const router = useRouter();
   const meta = {
     ...defaultMeta,
-    ...props
+    ...props,
   };
 
   // Use siteName if there is templateTitle
@@ -51,35 +50,31 @@ const SeoHead = (props) => {
   return (
     <Head>
       <title>{meta.title}</title>
-      <meta name='robots' content={meta.robots} />
-      <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
-      <link rel='canonical' href={`${meta.url}${router.asPath}`} />
+      <meta name="robots" content={meta.robots} />
+      <meta content={meta.description} name="description" />
+      <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+      <link rel="canonical" href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
-      <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.siteName} />
-      <meta property='og:description' content={meta.description} />
-      <meta property='og:title' content={meta.title} />
-      <meta name='image' property='og:image' content={meta.image} />
+      <meta property="og:type" content={meta.type} />
+      <meta property="og:site_name" content={meta.siteName} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:title" content={meta.title} />
+      <meta name="image" property="og:image" content={meta.image} />
       {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@F2aldi' />
-      <meta name='twitter:title' content={meta.title} />
-      <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@F2aldi" />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={meta.image} />
       {meta.date && (
         <>
-          <meta property='article:published_time' content={meta.date} />
+          <meta property="article:published_time" content={meta.date} />
           <meta
-            name='publish_date'
-            property='og:publish_date'
+            name="publish_date"
+            property="og:publish_date"
             content={meta.date}
           />
-          <meta
-            name='author'
-            property='article:author'
-            content={meta.author}
-          />
+          <meta name="author" property="article:author" content={meta.author} />
         </>
       )}
       {/* Favicons */}
@@ -87,13 +82,13 @@ const SeoHead = (props) => {
         <link key={linkProps.href} {...linkProps} />
       ))}
       {/* Windows 8 app icon */}
-      <meta name='msapplication-TileColor' content='#F53838' />
+      <meta name="msapplication-TileColor" content="#F53838" />
       <meta
-        name='msapplication-TileImage'
-        content='/favicon/ms-icon-144x144.png'
+        name="msapplication-TileImage"
+        content="/favicon/ms-icon-144x144.png"
       />
       {/* Accent color on supported browser */}
-      <meta name='theme-color' content='#F53838' />
+      <meta name="theme-color" content="#F53838" />
     </Head>
   );
 };
