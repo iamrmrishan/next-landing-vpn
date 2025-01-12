@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 // import react slick
 import Slider from "react-slick";
@@ -8,57 +9,29 @@ import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
 const Testimoni = ({
-   testimonialPosts = [
+  testimonialPosts = [
     {
-      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadhavi.pathirage%2Fposts%2Fpfbid0MP91mXmLuxAKDAXcqZMSyZ7dNzMYLmKbAYKSomp6fp7afeyk6tZjzWWieZCe7pg4l&show_text=true',
-      height: '351px',
+      url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadhavi.pathirage%2Fposts%2Fpfbid0MP91mXmLuxAKDAXcqZMSyZ7dNzMYLmKbAYKSomp6fp7afeyk6tZjzWWieZCe7pg4l&show_text=true",
+      height: "351px",
     },
     {
-      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fsandushi.jayawardene%2Fposts%2Fpfbid0nkKZ9VMGL6mPKmhKsERS92ZVtukE441kEhvMKccyN5RFCbWFuZYoqpR8drCXcXNul&show_text=true',
-      height: '198px',
+      url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fsandushi.jayawardene%2Fposts%2Fpfbid0nkKZ9VMGL6mPKmhKsERS92ZVtukE441kEhvMKccyN5RFCbWFuZYoqpR8drCXcXNul&show_text=true",
+      height: "198px",
     },
     {
-      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpamoda.herath%2Fposts%2Fpfbid0275vCHGiMihbWx1s5rSCJnFLFJJJZnszKEHRTwtHtuN1zJTHeHcKX7Cvt1eAF5W75l&show_text=true',
-      height: '195px',
+      url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fpamoda.herath%2Fposts%2Fpfbid0275vCHGiMihbWx1s5rSCJnFLFJJJZnszKEHRTwtHtuN1zJTHeHcKX7Cvt1eAF5W75l&show_text=true",
+      height: "195px",
     },
     {
-      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fkinkini.weeramanthri%2Fposts%2Fpfbid026Eo9WmdDHjxesbouNPUhjpsuLfy8unj6U67QrNdFQwmznwL2QqwUtduSZb9JdrUYl&show_text=true',
-      height: '260px',
+      url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fkinkini.weeramanthri%2Fposts%2Fpfbid026Eo9WmdDHjxesbouNPUhjpsuLfy8unj6U67QrNdFQwmznwL2QqwUtduSZb9JdrUYl&show_text=true",
+      height: "260px",
     },
     {
-      url: 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fthushi.dias%2Fposts%2Fpfbid025oEwwM1x3y929AtWHoG2tBZbtQiEMqBY425u1Du4Y22MyNH8UtdznFZXsBMvKLKCl&show_text=true',
-      height: '250px',
+      url: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fweb.facebook.com%2Fthushi.dias%2Fposts%2Fpfbid025oEwwM1x3y929AtWHoG2tBZbtQiEMqBY425u1Du4Y22MyNH8UtdznFZXsBMvKLKCl&show_text=true",
+      height: "250px",
     },
-  ]
+  ],
 }) => {
-  // const settings = {
-  //     dots: true,
-  //     infinite: true,
-  //     slidesToShow: 3,
-  //     slidesToScroll: 1,
-  //     autoplay: true,
-  //     speed: 2000,
-  //     autoplaySpeed: 2000,
-  //     cssEase: "linear",
-  //   responsive: [
-  //     {
-  //       breakpoint: 770,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
-
   const settings = {
     dots: true,
     customPaging: function (i) {
@@ -77,22 +50,22 @@ const Testimoni = ({
     autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
-          {
-            breakpoint: 770,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            },
-          },
-        ],
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -112,7 +85,7 @@ const Testimoni = ({
                 src={post.url}
                 width="100%"
                 height={post.height}
-                style={{ border: 'none', overflow: 'hidden' }}
+                style={{ border: "none", overflow: "hidden" }}
                 scrolling="no"
                 frameBorder="0"
                 allowTransparency="true"
@@ -138,8 +111,19 @@ const Testimoni = ({
           </div>
         </div>
       </div>
+      <div className="flex justify-center mt-8">
+        <Link href="/reviews" passHref>
+          <a
+            className="px-6 py-3 text-white font-bold bg-blue-500 hover:bg-blue-700 rounded-lg transition-all shadow-md"
+          >
+            See More Reviews
+          </a>
+        </Link>
+      </div>
     </>
   );
 };
 
 export default Testimoni;
+
+
